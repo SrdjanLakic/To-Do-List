@@ -6,7 +6,6 @@
 
 body {
   background-image: linear-gradient(120deg, #8d856d, #723d2e);
-  color: white;
   font-family: 'Poppins', cursive;
   min-height: 100vh;
 }
@@ -25,17 +24,17 @@ form button {
   padding: 0.5rem;
   font-size: 1.5rem;
   border: none;
-  background: white;
+  background: #969389;
 }
 form button {
-  color: #723d2e;
-  background: white;
+  color: #969389;
+  background: #723d2e;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button :hover {
   background: #723d2e;
-  color: white;
+  color: #8d856d;
 }
 .todo-container {
   display: flex;
@@ -48,10 +47,25 @@ form button :hover {
 }
 .todo {
   margin: 0.5rem;
-  background: #8d856d;
+  background: #969389;
   color: black;
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.todo li {
+  flex: 1;
+}
+.trash-button,
+.check-button {
+  background: #723d2e;
+  color: #969389;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.check-button {
+  color: #293e23;
 }
