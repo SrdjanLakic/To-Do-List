@@ -9,7 +9,6 @@ const addTodo = function (e) {
   todoEl.classList.add('todo');
   const newTodo = document.createElement('li');
   newTodo.classList.add('todo-item');
-  newTodo.textContent = 'hey';
   todoEl.appendChild(newTodo);
   const checkButton = document.createElement('button');
   checkButton.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
