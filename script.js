@@ -16,7 +16,7 @@ const addTodo = function (e) {
   checkButton.classList.add('check-button');
   todoEl.appendChild(checkButton);
   const trashButton = document.createElement('button');
-  trashButton.innerHTML = '<i class="fa-solid fa-circle-trash"></i>';
+  trashButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
   trashButton.classList.add('trash-button');
   todoEl.appendChild(trashButton);
   todoList.appendChild(todoEl);
