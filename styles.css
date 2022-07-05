@@ -56,7 +56,7 @@ form button :hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.5ms ease;
+  transition: all 0.5s ease;
 }
 .todo li {
   flex: 1;
@@ -85,7 +85,7 @@ form button :hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
-.fall {
-  transform: translateY(8rem) rotateZ(20deg);
+.slide {
+  transform: translateX(8rem) rotateY(40deg);
   opacity: 0;
 }

@@ -27,8 +27,10 @@ const deleteCheckItem = function (e) {
   const item = e.target;
   if (item.classList[0] === 'trash-btn') {
     const todo = item.parentElement;
-    console.log(todo);
-    todo.remove();
+    todo.classList.add('slide');
+    todo.addEventListener('transitionend', () => {
+      todo.remove();
+    });
   }
   if (item.classList[0] === 'done-btn') {
     const todo = item.parentElement;
