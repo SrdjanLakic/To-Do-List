@@ -34,7 +34,7 @@ const deleteCheckItem = function (e) {
   }
   if (item.classList[0] === 'done-btn') {
     const todo = item.parentElement;
-    todo.classList.toggle('completed');
+    todo.classList.toggle('done');
   }
 };
 todoButton.addEventListener('click', addTodo);
