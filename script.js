@@ -24,7 +24,7 @@ const addTodo = function (e) {
   todoInput.value = '';
 };
 
-const deleteItem = function (e) {
+const deleteCheckItem = function (e) {
   const click = e.target;
   console.log(click);
   if (click.classList[0] === 'trash-button') {
@@ -32,6 +32,10 @@ const deleteItem = function (e) {
     console.log(item);
     item.remove();
   }
+  if (click.classList[0] === 'check-button') {
+    const item = click.parentElement;
+    item.classList.toggle('completed');
+  }
 };
 todoButton.addEventListener('click', addTodo);
-todoList.addEventListener('click', deleteItem);
+todoList.addEventListener('click', deleteCheckItem);
