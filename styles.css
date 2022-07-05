@@ -89,3 +89,15 @@ form button :hover {
   transform: translateX(8rem) rotateY(40deg);
   opacity: 0;
 }
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: black;
+  width: 7rem;
+  cursor: pointer;
+  padding-left: 0.3rem;
+  font-weight: bold;
+}
