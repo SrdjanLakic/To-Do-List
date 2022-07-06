@@ -5,17 +5,18 @@ const filterOption = document.querySelector('.filter-todo');
 
 const addTodo = function (e) {
   e.preventDefault();
-
   const todoEl = document.createElement('div');
   todoEl.classList.add('todo');
   const newTodo = document.createElement('li');
   newTodo.textContent = todoInput.value;
   newTodo.classList.add('todo-item');
   todoEl.appendChild(newTodo);
+
   const checkButton = document.createElement('button');
   checkButton.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
   checkButton.classList.add('done-btn');
   todoEl.appendChild(checkButton);
+
   const trashButton = document.createElement('button');
   trashButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
   trashButton.classList.add('trash-btn');
@@ -62,6 +63,17 @@ const filterList = function (e) {
         break;
     }
   });
+};
+
+const saveLocalList = function (todo) {
+  let todos;
+  if (localStorage.getItem('todos') === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem('todos'));
+  }
+  todos.push(todo);
+  localStorage.setItem('todos', JSON.stringify('todos'));
 };
 
 todoButton.addEventListener('click', addTodo);
