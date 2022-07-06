@@ -66,3 +66,4 @@ const filterList = function (e) {
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheckItem);
+filterOption.addEventListener('click', filterList);
