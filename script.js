@@ -80,3 +80,4 @@ function saveLocalList(todo) {
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheckItem);
+filterOption.addEventListener('click', saveLocalList);
