@@ -11,6 +11,7 @@ const addTodo = function (e) {
   newTodo.textContent = todoInput.value;
   newTodo.classList.add('todo-item');
   todoEl.appendChild(newTodo);
+  saveLocalList(todoInput.value);
 
   const checkButton = document.createElement('button');
   checkButton.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
@@ -65,17 +66,17 @@ const filterList = function (e) {
   });
 };
 
-const saveLocalList = function (todo) {
+function saveLocalList(todo) {
   let todos;
   if (localStorage.getItem('todos') === null) {
     todos = [];
   } else {
     todos = JSON.parse(localStorage.getItem('todos'));
   }
+  console.log(todos);
   todos.push(todo);
-  localStorage.setItem('todos', JSON.stringify('todos'));
-};
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
 
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheckItem);
-filterOption.addEventListener('click', filterList);
