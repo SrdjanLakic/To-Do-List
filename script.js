@@ -5,6 +5,7 @@ const filterOption = document.querySelector('.filter-todo');
 
 const addTodo = function (e) {
   e.preventDefault();
+  if (!todoInput.value) return;
   const todoEl = document.createElement('div');
   todoEl.classList.add('todo');
   const newTodo = document.createElement('li');
